@@ -1,0 +1,15 @@
+spring:
+  eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka/
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: greeting
+        uri: lb://greeting
+        predicates:
+        - Path=/greeting/**
