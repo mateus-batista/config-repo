@@ -25,3 +25,11 @@ eureka:
     metadata-map:
       user.name: "user"         #These two are needed so that the server
       user.password: "password" #can access the protected client endpoints
+---
+
+spring:
+  profiles: docker
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-service:8761/eureka/
