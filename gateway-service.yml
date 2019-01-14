@@ -9,8 +9,8 @@ spring:
         locator:
           enabled: true
       routes:
-      - id: greeting
-        uri: lb://greeting
+      - id: greeting-instance
+        uri: lb://greeting-instance
         predicates:
         - Path=/greeting/**
         
