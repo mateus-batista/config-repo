@@ -1,15 +1,18 @@
 server:
   port: 8761
 
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
-
 spring:
   security:
     user:
       name: eureka_admin
       password: secret
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka_admin:secret@localhost:8761/eureka/
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 1000
