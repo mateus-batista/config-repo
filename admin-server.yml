@@ -7,7 +7,7 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka_admin:secret@localhost:8761/eureka/
 
 ---
 spring:
@@ -24,7 +24,7 @@ eureka:
   instance:
     metadata-map:
       user.name: "admin"         #These two are needed so that the server
-      user.password: "pwd" #can access the protected client endpoints
+      user.password: "secret"    #can access the protected client endpoints
 ---
 
 spring:
@@ -32,4 +32,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-service:8761/eureka/
+      defaultZone: http://eureka_admin:secret@eureka-service:8761/eureka/
