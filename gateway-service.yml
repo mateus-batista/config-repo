@@ -1,8 +1,4 @@
 spring:
-  eureka:
-    client:
-      serviceUrl:
-        defaultZone: http://eureka_admin:secret@localhost:8761/eureka/
   cloud:
     gateway:
       discovery:
@@ -13,7 +9,10 @@ spring:
           uri: lb://greeting-instance
           predicates:
             - Path=/greeting/**
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka_admin:secret@localhost:8761/eureka/
 ---
 
 spring:
