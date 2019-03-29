@@ -1,3 +1,9 @@
+spring:
+  security:
+    user:
+      name: admin
+      password: secret
+
 eureka:
   client:
     serviceUrl:

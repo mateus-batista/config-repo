@@ -1,4 +1,4 @@
-# DON'T USE IN A PRODUCTION SCENARIO
+# For production you should carefully choose which endpoints to expose.
 management:
   endpoints:
     web:

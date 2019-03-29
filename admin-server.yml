@@ -23,8 +23,8 @@ spring:
 eureka:
   instance:
     metadata-map:
-      user.name: "admin"  #These two are needed so that the server
-      user.password: "secret"    #can access the protected client endpoints
+      user.name: "admin"
+      user.password: "secret"
 ---
 
 spring:
